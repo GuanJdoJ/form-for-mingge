@@ -1,0 +1,46 @@
+{
+	"name": "form-for-mingge",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
+		"build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
+		"build": "npm run build:h5"
+	},
+	"dependencies": {
+		"@dcloudio/uni-h5": "^2.0.0-29820201110001",
+		"@vue/shared": "^3.0.0",
+		"core-js": "^3.8.0",
+		"regenerator-runtime": "^0.13.7",
+		"uview-ui": "^1.8.2",
+		"vue": "^2.6.11"
+	},
+	"devDependencies": {
+		"@dcloudio/types": "2.0.18",
+		"@dcloudio/uni-automator": "^2.0.0-29820201110001",
+		"@dcloudio/uni-cli-shared": "^2.0.0-29820201110001",
+		"@dcloudio/uni-migration": "^2.0.0-29820201110001",
+		"@dcloudio/uni-template-compiler": "^2.0.0-29820201110001",
+		"@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.0-29820201110001",
+		"@dcloudio/vue-cli-plugin-uni": "^2.0.0-29820201110001",
+		"@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.0-29820201110001",
+		"@dcloudio/webpack-uni-mp-loader": "^2.0.0-29820201110001",
+		"@dcloudio/webpack-uni-pages-loader": "^2.0.0-29820201110001",
+		"@vue/cli-plugin-babel": "~4.5.9",
+		"@vue/cli-service": "~4.5.9",
+		"babel-plugin-component": "^1.1.1",
+		"babel-plugin-import": "^1.13.3",
+		"cross-env": "^7.0.2",
+		"node-sass": "^5.0.0",
+		"postcss-comment": "^2.0.0",
+		"sass-loader": "^10.1.0",
+		"vue-template-compiler": "^2.6.11"
+	},
+	"browserslist": [
+		"Android >= 4",
+		"ios >= 8"
+	],
+	"uni-app": {
+		"scripts": {}
+	}
+}

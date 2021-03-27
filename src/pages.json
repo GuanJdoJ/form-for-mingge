@@ -1,0 +1,23 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [
+		{
+			"path": "pages/index",
+			"style": {
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "调查问卷",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"app-plus": {
+			"titleNView": {
+				"titleSize": "36rpx",
+				"titleColor": "#333333"
+			}
+		}
+	}
+}
