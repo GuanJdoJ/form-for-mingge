@@ -6,12 +6,13 @@
 		{
 			"path": "pages/index",
 			"style": {
+				"navigationBarTitleText": "签到表"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "调查问卷",
+		"navigationBarTitleText": "表单",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"app-plus": {
 			"titleNView": {

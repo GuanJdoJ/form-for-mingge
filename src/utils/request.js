@@ -11,13 +11,12 @@ const request = (url, {method, data = {}, failToast = true, modalLoading = ''}) 
 		title: modalLoading,//loading及文字
 		mask: true,
 	})
-	const proxyFlag = process.env.NODE_ENV === 'development' ? `/app` : `http://xxx`//TODO 此处需调整为真实请求域名
+	const proxyFlag = process.env.NODE_ENV === 'development' ? `/app` : `http://xxx`//TODO http://xxx此处需调整为真实请求域名
 	return new Promise((resolve, reject) => {
 		uni.request({
 			url: `${proxyFlag}/${urls[url]}`,
 			data: data,
 			method: method || 'POST',
-			header: header,
 			success: res => {
 				modalLoading && uni.hideLoading()
 				if (res.statusCode == '200') {
@@ -26,7 +25,8 @@ const request = (url, {method, data = {}, failToast = true, modalLoading = ''}) 
 					resolve(res.data.data) //TODO 此处需要根据后台接口返回格式调整
 				} else {
 					//异常输出
-					failToast && api.toast(res.data.message)//TODO 此处需要根据后台接口返回格式调整报错信息
+					reject(res)
+					//failToast && api.toast(res.data.message)//TODO 此处需要根据后台接口返回格式调整报错信息
 				}
 			},
 			fail: err => {
